@@ -1,6 +1,7 @@
 package Pages;
 
 import org.openqa.selenium.WebDriver;
+import static Utils.ConstantUnits.*;
 
 public class O0AbstractPage {
 
@@ -14,8 +15,8 @@ public class O0AbstractPage {
         return drv;
     }
 
-    public O1AutorizationPage navigateToWebApp() {
-        drv.navigate().to("http://js-nobius.myapp.com.ua/#/login");
-        return new O1AutorizationPage(drv);
+    public O1AuthorizationPage navigateToWebApp() {
+        drv.navigate().to(StartPage);
+        return new O1AuthorizationPage(drv);
     }
 }

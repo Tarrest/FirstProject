@@ -14,8 +14,9 @@ public class O4MainPage extends O0AbstractPage{
         super(drv);
     }
 
-    public String checkUserName() {
-        return drv.findElement(By.xpath("//div[2]/div/div[2]")).getText();
+    public void checkUserName(String text) {
+        String answer =  drv.findElement(By.xpath("//div[2]/div/div[2]")).getText();
+        Assert.assertTrue(text.equalsIgnoreCase(answer));
     }
 
 
